@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.active{
+  background-color: crimson;
+  width: 100%;
+  text-decoration: none;
+}
+.link:hover{
+  text-decoration: none;
+  width: 100%;
+  background-color: rgb(218, 108, 130);
+}
+.DivContainer::-webkit-scrollbar{
+  display: none;
+}
