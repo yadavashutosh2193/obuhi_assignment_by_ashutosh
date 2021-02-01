@@ -51,8 +51,7 @@ const pool = new Pool({
     )
   }
   const Spend_funds = (request, response) => {
-    const {user_id, amount, initial_balance } = request.body;
-  const final_balance = initial_balance - amount;
+    const {user_id, amount} = request.body;
     pool.query(
       'UPDATE personal_wallet SET amount = amount - $1 WHERE user_id = $2',
       [amount, user_id],
@@ -63,14 +62,6 @@ const pool = new Pool({
         response.status(200).send(`balance modified with user_id: ${user_id}`);
       }
     )
-  pool.query('INSERT INTO transactions (user_id, transaction_type, initial_balance, amount final_balance) VALUES ($1, debit, $2, $3, $4',
-  [user_id, initial_balance, amount, final_balance]), (err, res)=>{
-    if(err){
-      throw err;
-    }
-    res.status(201).send("updated");
-  }
-
   }
 
   const AllWallete = (request, response)=>{

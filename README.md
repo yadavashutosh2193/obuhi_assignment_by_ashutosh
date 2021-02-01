@@ -1,4 +1,19 @@
 # Getting Started with Create React App
+for backend =>
+install npm and nodejs
+install express pg
+install cors
+
+
+for froend end=>{
+    create react app;
+    insatall bootstrap;
+    install react-router-dom;
+    
+}
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
